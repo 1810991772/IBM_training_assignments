@@ -43,5 +43,12 @@ public class StudentServiceImpl implements StudentService {
 		// TODO Auto-generated method stub
 		 return   studentRepository.findById(id).get();
 	}
+	@Override
+	 public List<Student> listAll(String keyword) {
+	        if (keyword != null) {
+	            return studentRepository.search(keyword);
+	        }
+	        return studentRepository.findAll();
+	    }
 
 }

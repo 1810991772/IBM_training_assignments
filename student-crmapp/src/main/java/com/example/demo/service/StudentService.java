@@ -15,5 +15,5 @@ public interface StudentService {
 	public Student findStudent(int theId);
 
 	public Student updateStudent(int id);
-
+	 public List<Student> listAll(String keyword);
 }

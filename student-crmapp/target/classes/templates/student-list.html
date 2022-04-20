@@ -12,7 +12,12 @@
 <a th:href="@{/students/showFormForAdd}"
    class="btn btn-primary btn-sm mb-3">
   Add Student
-</a>
+</a><form th:action="@{/students/list}" method="POST">
+    Search : <input type="text" name="keyword" id="keyword" size="50" th:value="${keyword}" required />
+    &nbsp;
+    <input type="submit" value="Search" />
+   
+</form>
 <table class="table table-striped">
   <thead>
   <tr>

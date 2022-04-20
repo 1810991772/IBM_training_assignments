@@ -49,6 +49,15 @@ public class StudentController {
     	studentService.deleteStudent(id);
         return "redirect:/students/list";
     }
+    @RequestMapping("/list")
+    public String viewHomePage(Model model, @RequestParam("keyword") String keyword) {
+        List<Student> students =studentService.listAll(keyword);
+        System.out.print("list is "+students);
+        model.addAttribute("students",students);
+        model.addAttribute("keyword", keyword);
+         
+        return "student-list";
+    }
 
     @GetMapping("/showFormForUpdate")
     public String showFormForEdit(@RequestParam("id")int id,Model model)
