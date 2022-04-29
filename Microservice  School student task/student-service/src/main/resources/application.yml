@@ -13,7 +13,7 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/cs_db
+    url: jdbc:mysql://localhost:3306/hr
     username: root
     password: root
 eureka:
